@@ -1,0 +1,21 @@
+#!/usr/bin/python
+# coding: UTF-8
+
+name = raw_input("name:")
+width = raw_input("image width:")
+height = raw_input("image height")
+num = raw_input("image num:")
+
+f = open(name, 'w')
+f.truncate()
+
+f.write(num)
+f.write("\n")
+
+for i in range(num):
+    format(%r %r %r %r %r %r %r %r %r)
+    str = name
+    f.write(name + "_" + i + "_crop.png")
+    f.write(name + "_" + i + "_depthcrop.png")
+    
+f.close()
