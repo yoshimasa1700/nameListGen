@@ -4,25 +4,23 @@
 from sys import argv
 argc = len(argv)
 
-if argc < 6:
+if argc < 4:
     name       = raw_input("name:")
-    width      = raw_input("image width:")
-    height     = raw_input("image height:")
     class_name = raw_input("class:")
     num        = raw_input("image num:")
 else:
-    srcipt, name, width, height, class_name, num = argv
+    srcipt, name, class_name, num = argv
 
 
 fnum = int(num) / 2
 
-f = open("dataListInstL1.txt", 'w')
+f = open("dataList1.txt", 'w')
 f.truncate()
 
 f.write(str(fnum))
 f.write("\n")
 
-f2 = open("dataListInstL2.txt", 'w')
+f2 = open("dataList2.txt", 'w')
 f2.truncate()
 
 f2.write(str(fnum))
@@ -37,18 +35,6 @@ for i in range(int(fnum)):
     f.write(" ")
     f.write(name + "_" + str(j + 1) + "_maskcrop.png")
     f.write(" ")
-    f.write('0')
-    f.write(" ")
-    f.write('0')
-    f.write(" ")
-    f.write(width)
-    f.write(" ")
-    f.write(height)
-    f.write(" ")
-    f.write(str(int(width)/2))
-    f.write(" ")
-    f.write(str(int(height)/2))
-    f.write(" ")
     f.write(class_name)
     f.write(" ")
     f.write(str(int(j) * 6))
@@ -61,18 +47,6 @@ for i in range(int(fnum)):
     f2.write(name + "_" + str(k + 1) + "_depthcrop.png")
     f2.write(" ")
     f2.write(name + "_" + str(k + 1) + "_maskcrop.png")
-    f2.write(" ")
-    f2.write('0')
-    f2.write(" ")
-    f2.write('0')
-    f2.write(" ")
-    f2.write(width)
-    f2.write(" ")
-    f2.write(height)
-    f2.write(" ")
-    f2.write(str(int(width)/2))
-    f2.write(" ")
-    f2.write(str(int(height)/2))
     f2.write(" ")
     f2.write(class_name)
     f2.write(" ")
